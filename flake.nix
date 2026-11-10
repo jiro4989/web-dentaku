@@ -1,5 +1,5 @@
 {
-  description = "textimg is command to convert from color text (ANSI or 256) to image.";
+  description = "web-dentaku is a static dentaku on website.";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
