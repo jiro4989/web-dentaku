@@ -1,0 +1,9 @@
+* web-dentaku
+
+web-dentaku は GitHub Pages 上で動作する静的な電卓です。
+
+[[file:./docs/demo.png]]
+
+** サイト
+
+- https://jiro4989.github.io/web-dentaku/
