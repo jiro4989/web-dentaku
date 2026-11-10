@@ -3,6 +3,11 @@
 # Docs: https://gh.io/actions-lockfile
 version: 'v0.0.3'
 workflows:
+    '.github/workflows/pages.yml':
+        - 'actions/checkout@v6.0.2'
+        - 'actions/configure-pages@v6.0.0'
+        - 'actions/deploy-pages@v5.0.0'
+        - 'actions/upload-pages-artifact@v3.0.1'
     '.github/workflows/test.yml':
         - 'actions/checkout@v5.1.0'
         - 'cachix/install-nix-action@v31.11.3'
@@ -12,6 +17,33 @@ dependencies:
         commit: 'sha1-fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09'
         owner_id: 44036562
         repo_id: 197814629
+    'actions/checkout@v6.0.2':
+        ref: 'v6.0.2'
+        commit: 'sha1-de0fac2e4500dabe0009e67214ff5f5447ce83dd'
+        owner_id: 44036562
+        repo_id: 197814629
+    'actions/configure-pages@v6.0.0':
+        ref: 'v6.0.0'
+        commit: 'sha1-45bfe0192ca1faeb007ade9deae92b16b8254a0d'
+        owner_id: 44036562
+        repo_id: 513659658
+    'actions/deploy-pages@v5.0.0':
+        ref: 'v5.0.0'
+        commit: 'sha1-cd2ce8fcbc39b97be8ca5fce6e763baed58fa128'
+        owner_id: 44036562
+        repo_id: 438112499
+    'actions/upload-artifact@v4':
+        ref: 'v4'
+        commit: 'sha1-ea165f8d65b6e75b540449e92b4886f43607fa02'
+        owner_id: 44036562
+        repo_id: 192625955
+    'actions/upload-pages-artifact@v3.0.1':
+        ref: 'v3.0.1'
+        commit: 'sha1-56afc609e74202658d3ffba0e8f6dda462b719fa'
+        owner_id: 44036562
+        repo_id: 496012378
+        uses:
+            - 'actions/upload-artifact@v4'
     'cachix/install-nix-action@v31.11.3':
         ref: 'v31.11.3'
         commit: 'sha1-75c75c31ebece974e48ebc36b4ad125bd97bd97b'
