@@ -23,6 +23,12 @@ jobs:
       - uses: cachix/install-nix-action@v31
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check formatting
+        shell: nix develop -c bash -e {0}
+        run: deno task fmt --check
+      - name: Lint
+        shell: nix develop -c bash -e {0}
+        run: deno task lint
       - name: Run Deno tests
         shell: nix develop -c bash -e {0}
-        run: deno task test
+        run: deno test tests/*
