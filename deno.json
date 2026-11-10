@@ -1,0 +1,16 @@
+{
+  "tasks": {
+    "test": "deno task fmt && deno task lint && deno test tests/*",
+    "fmt": "deno fmt public/*.js tests/*",
+    "lint": "deno lint public/*.js tests/*",
+    "start": "cd public && python3 -m http.server 8000"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["no-window"]
+    }
+  }
+}
