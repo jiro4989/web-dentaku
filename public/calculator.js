@@ -199,8 +199,7 @@ function inputOperator(state, operator) {
   const last = expression.at(-1);
   if (OPERATORS.has(last)) {
     const previous = expression.at(-2);
-    const unaryMinus =
-      last === "-" &&
+    const unaryMinus = last === "-" &&
       (previous === undefined || OPERATORS.has(previous) || previous === "(");
 
     if (operator === "-" && !unaryMinus && last !== "-") {
@@ -253,7 +252,9 @@ function inputCloseParen(state) {
 }
 
 function deleteLast(state) {
-  if (state.justEvaluated || state.expression.length <= 1) return initialState();
+  if (state.justEvaluated || state.expression.length <= 1) {
+    return initialState();
+  }
   return editing(state.expression.slice(0, -1));
 }
 

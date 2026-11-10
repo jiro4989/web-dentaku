@@ -64,7 +64,7 @@ test("groups digits only after evaluation", () => {
 });
 
 test("continues from the result or starts a new entry", () => {
-  assert.equal(shown(["1", "+", "2", "=", "+","4", "="]), "7");
+  assert.equal(shown(["1", "+", "2", "=", "+", "4", "="]), "7");
   assert.equal(shown(["1", "+", "2", "=", "9"]), "9");
 });
 
@@ -78,7 +78,7 @@ test("DEL removes the last character and AC clears", () => {
 test("shows Error for divide by zero and incomplete input", () => {
   assert.equal(shown(["8", "÷", "0", "="]), "Error");
   assert.equal(shown(["(", "1", "+", "2", "="]), "Error");
-  assert.equal(shown(["5", "+","="]), "Error");
+  assert.equal(shown(["5", "+", "="]), "Error");
   assert.equal(shown(["8", "÷", "0", "=", "AC"]), "0");
   assert.equal(shown(["8", "÷", "0", "=", "4"]), "4");
 });
